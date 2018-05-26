@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Todos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!--
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        -->
+    </head>
+    <body>
+
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Todos</a>
+        </nav>
+
+        <!-- div.form-group>textarea.form-control -->
+        <div class="container">
+
+            <form class="js--add-task-form" action="">
+                <div class="row justify-content-center">
+                    <div class="col-12 bg-light form-bg">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <input class="form-control" name="taskName" type="text" placeholder="Nazawa zadania">
+                            </div>
+
+                            <div class="col-12 col-md-2">
+                                <select name="priority" class="form-control">
+                                    <option value="1">Normalny</option>
+                                    <option value="0">Niski</option>
+                                    <option value="2">Wysoki</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-3">
+                                <input name="date" type="date" class="form-control">
+                            </div>
+
+                            <div class="col-12 col-md-1">
+                                <button class="btn btn-primary">Dodaj</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <hr>
+
+            <section>
+                <div class="row heading-row">
+                    <div class="col-12">
+                        <h4>Lista zadań</h4>
+                        <select class="form-control js--sort">
+                            <option value="name-desc">Wg. nazwy (malejąco)</option>
+                            <option value="name-asc">Wg. nazwy (rosnąco)</option>
+                            <option value="priority-desc">Wg. priorytetu (malejąco)</option>
+                            <option value="priority-asc">Wg. priorytetu (rosnąco)</option>
+                            <option value="deadline-desc">Wg. deadline (malejąco)</option>
+                            <option value="deadline-asc">Wg. deadline (rosnąco)</option>
+                            <option value="createdAt-desc">Wg. daty utworzenia (malejąco)</option>
+                            <option value="createdAt-asc">Wg. daty utworzenia (rosnąco)</option>
+                            <option value="done-desc">Wg. wykonania (wykonane na górze)</option>
+                            <option value="done-asc">Wg. wykonania (wykonane na dole)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="list-group js--todos-container js--undone-todos-container">
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="row heading-row">
+                    <div class="col-12">
+                        <h4>Zadania wykonane</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="list-group js--todos-container js--done-todos-container">
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script src="vendor/jquery/jquery-3.3.1.slim.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/main-3.js"></script>
+    </body>
+</html>
+
+
+

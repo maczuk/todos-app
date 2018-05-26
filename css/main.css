@@ -1,0 +1,11 @@
+.navbar {
+	margin-bottom: 30px;
+}
+
+.form-bg {
+	padding: 15px;
+}
+
+.task-status-done {
+	text-decoration: line-through;
+}
